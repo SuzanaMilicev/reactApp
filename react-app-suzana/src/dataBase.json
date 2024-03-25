@@ -1,0 +1,95 @@
+{
+    "dataList": [
+      {
+        "id": 1,
+        "category": "distribution",
+        "imgSrc": "assets/partneri.png",
+        "title": "POSTANITE NAŠ PARTNER"
+      },
+      {
+        "id": 2,
+        "category": "distribution",
+        "imgSrc": "assets/proizvodi.png",
+        "title": "NAŠI PROIZVODI"
+      },
+      {
+        "id": 3,
+        "category": "distribution",
+        "imgSrc": "assets/uvoz.png",
+        "title": "UVOZ IZ MAĐARSKE"
+      },
+      {
+        "id": 4,
+        "category": "products",
+        "imgSrc": "assets/kese.png",
+        "title": "KESE I FOLIJE"
+      },
+      {
+        "id": 5,
+        "category": "products",
+        "imgSrc": "assets/kuhinja.png",
+        "title": "ZA KUHINJU"
+      },
+      {
+        "id": 6,
+        "category": "products",
+        "imgSrc": "assets/ubrus.png",
+        "title": "UBRUSI I TOALET PAPIRI"
+      },
+      {
+        "id": 7,
+        "category": "products",
+        "imgSrc": "assets/kozmetika.png",
+        "title": "KOZMETIKA"
+      },
+      {
+        "id": 8,
+        "category": "products",
+        "imgSrc": "assets/kanta.png",
+        "title": "PLASTIČNE KANTE"
+      },
+      {
+        "id": 9,
+        "category": "products",
+        "imgSrc": "assets/kozmetika.png",
+        "title": "KREME ZA TELO"
+      },
+      {
+        "id": 10,
+        "category": "brands",
+        "imgSrc": "assets/logoi-01.png",
+        "title": "Dove"
+      },
+      {
+        "id": 11,
+        "category": "brands",
+        "imgSrc": "assets/logoi-02.png",
+        "title": "Nivea"
+      },
+      {
+        "id": 12,
+        "category": "brands",
+        "imgSrc": "assets/logoi-03.png",
+        "title": "Palmolive"
+      },
+      {
+        "id": 13,
+        "category": "brands",
+        "imgSrc": "assets/logoi-04.png",
+        "title": "Vanish"
+      },
+      {
+        "id": 14,
+        "category": "brands",
+        "imgSrc": "assets/logoi-05.png",
+        "title": "Ajax"
+      },
+      {
+        "id": 15,
+        "category": "brands",
+        "imgSrc": "assets/logoi-06.png",
+        "title": "Cif"
+      }
+    ],
+    "nav": []
+  }
