@@ -1,9 +1,9 @@
 {
-    "dataList": [
+    "dataList" : [
       {
-        "id": 1,
+       "id": 1,
         "category": "distribution",
-        "imgSrc": "assets/partneri.png",
+        "imgSrc": "../assets/partneri.png",
         "title": "POSTANITE NAŠ PARTNER"
       },
       {
@@ -90,6 +90,5 @@
         "imgSrc": "assets/logoi-06.png",
         "title": "Cif"
       }
-    ],
-    "nav": []
+    ]
   }

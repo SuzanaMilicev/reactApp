@@ -1,12 +1,13 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/about.scss';
+import { AboutDVG } from '../assets';
 
 export default function About() {
     return (
         <>
             <section id="about">
                 <div className="about-img">
-                    <img src={require('./../assets/dvg-company.png')} alt="about_DVG" id="dvg-image" />
+                    <img src={AboutDVG} alt="about_DVG" id="dvg-image" />
                 </div>
                 <div className="about-text">
                     <h2>DVG Company</h2>

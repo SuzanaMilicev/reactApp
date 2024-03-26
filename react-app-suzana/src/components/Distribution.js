@@ -1,5 +1,6 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/distribution.scss';
+import DistributionList from './Distribution-list.js';
 
 export default function Distribution() {
     return (
@@ -12,7 +13,7 @@ export default function Distribution() {
                     </div>
                 </div>
                 <div className="distribution-container">
-                    
+                    <DistributionList />
                 </div>
             </section>
         </>

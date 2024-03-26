@@ -1,16 +1,46 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/header.scss';
 import { Close, DarkMode, Menu, WbSunny } from "@mui/icons-material";
+import { logo } from '../assets';
 
-export default function Header() {
+function openMenu() {
+    var menu = document.querySelector(".menu");
+    var openBtn = document.getElementById("menu-btn1");
+    var closeBtn = document.getElementById("menu-btn2");
+    menu.style.display = "flex";
+    closeBtn.style.display = "block";
+    openBtn.style.display = "none";
+};
+
+function closeMenu() {
+    var menu = document.querySelector(".menu");
+    var openBtn = document.getElementById("menu-btn1");
+    var closeBtn = document.getElementById("menu-btn2");
+    menu.style.display = "none";
+    closeBtn.style.display = "none";
+    openBtn.style.display = "block";
+};
+
+document.querySelectorAll(".menu li a").forEach(function (elem) {
+    elem.addEventListener('click', function (ev) {
+        var menu = document.querySelector(".menu");
+        var openBtn = document.getElementById("menu-btn1");
+        var closeBtn = document.getElementById("menu-btn2");
+        menu.style.display = "none";
+        closeBtn.style.display = "none";
+        openBtn.style.display = "block";
+    });
+});
+
+export default function Header({dark, onsetDark}) {
     return (
         <>
             <header className="header">
                 <div className="header-gray">
-                    <img src={require('./../assets/logo.png')} alt="logo" className="logo" />
+                    <img src={logo} alt="logo" className="logo" />
                     <span className="languages">
                         <div className="toggle">
-                            <input type="checkbox" className="checkbox" id="checkbox" />
+                            <input type="checkbox" className="checkbox" id="checkbox" checked={dark} onChange={(e) => onsetDark(document.body.classList.toggle("dark"))}/>
                             <label htmlFor="checkbox" className="checkbox-label">
                                 <DarkMode className="material-symbols-outlined" />
                                 <WbSunny className="material-symbols-outlined" />
@@ -84,12 +114,12 @@ export default function Header() {
                         <Menu
                             className="material-symbols-outlined"
                             id="menu-btn1"
-                            onClick="openMenu()"
+                            onClick={openMenu}
                         />
                         <Close
                             className="material-symbols-outlined"
                             id="menu-btn2"
-                            onClick="closeMenu()"
+                            onClick={closeMenu}
                         />
                     </div>
                 </nav>
