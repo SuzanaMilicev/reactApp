@@ -1,6 +1,6 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/distribution.scss';
-import dataList from './../dataBase.json';
+import DistributionList from './Distribution-list.js';
 
 export default function Distribution() {
     return (
@@ -13,17 +13,7 @@ export default function Distribution() {
                     </div>
                 </div>
                 <div className="distribution-container">
-                    {/* <div className="distribution-item">
-                        {dataList.filter(el => el.category('distribution')).map(element => {
-                            return (
-                                <div className="distribution-item" key={element.id}>
-                                    <img src={element.imgSrc} alt="partners" className="dist-img" />
-                                    <br />
-                                    <a href="#0">{element.title}</a>
-                                </div>
-                            );
-                        })}
-                    </div> */}
+                    <DistributionList />
                 </div>
             </section>
         </>

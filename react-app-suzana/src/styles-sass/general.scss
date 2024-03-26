@@ -28,6 +28,78 @@
     padding-bottom: 50px;
 }
 
+/*DARK MODE*/
+
+.dark {
+    background-color: #121212;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        color: #fff;
+    }
+
+    .header {
+        nav {
+            background-color: #121212;
+
+            .hamburger {
+
+                #menu-btn1,
+                #menu-btn2 {
+                    color: #D9D9D9;
+                }
+            }
+
+            .menu {
+                background-color: #292929;
+
+                li {
+                    a {
+                        color: #fff;
+
+                        span {
+                            color: #D9D9D9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #about,
+    #our-products {
+        background-color: #121212;
+    }
+
+    #distribution {
+        a {
+            color: #fff;
+        }
+    }
+
+    #brands {
+        .brands-container {
+            .brands-item {
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .mymodal {
+        .modal-content {
+            background-color: #121212;
+            color: #fff;
+        }
+    }
+}
+
+/*RESPONSIVE*/
 @media (max-width: 665px) {
     .in-numbers {
         .numbers-container {
@@ -89,7 +161,7 @@
     }
 }
 
-@media (min-width: 865px) {
+@media screen and (min-width: 865px) {
     .hamburger {
         display: none !important;
 
@@ -102,7 +174,6 @@
     ul {
         display: flex !important;
     }
-
 }
 
 @media (max-width: 864px) {
@@ -208,77 +279,6 @@
                     max-height: 250px;
                 }
             }
-        }
-    }
-}
-
-/*DARK MODE*/
-
-.dark {
-    background-color: #121212;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        color: #fff;
-    }
-
-    .header {
-        nav {
-            background-color: #121212;
-
-            .hamburger {
-
-                #menu-btn1,
-                #menu-btn2 {
-                    color: #D9D9D9;
-                }
-            }
-
-            .menu {
-                background-color: #292929;
-
-                li {
-                    a {
-                        color: #fff;
-
-                        span {
-                            color: #D9D9D9;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    #about,
-    #our-products {
-        background-color: #121212;
-    }
-
-    #distribution {
-        a {
-            color: #fff;
-        }
-    }
-
-    #brands {
-        .brands-container {
-            .brands-item {
-                p {
-                    color: #fff;
-                }
-            }
-        }
-    }
-
-    .mymodal {
-        .modal-content {
-            background-color: #121212;
-            color: #fff;
         }
     }
 }
