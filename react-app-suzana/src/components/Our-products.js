@@ -1,36 +1,16 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/our-products.scss';
-import { Group105 } from '../assets/index.js';
-import OurProductsList from './Our-products-list.js';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-// const swiper2 = new Swiper('.swiper2', {
-//     direction: 'horizontal',
-//     loop: true,
-//     slidesPerView: 1,
-//     spaceBetween: 5,
-
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-
-//     breakpoints: {
-//         630: {
-//             slidesPerView: 2,
-//         },
-//         895: {
-//             slidesPerView: 3,
-//         },
-//         1150: {
-//             slidesPerView: 4,
-//         },
-//         1350: {
-//             slidesPerView: 5,
-//         }
-//     }
-// });
+import dataList from './../dataBase.json';
 
 export default function OurProducts() {
+    const productData = dataList.dataList.filter(product =>
+        product.category === 'products'
+    );
     return (
         <>
             <section id="our-products">
@@ -44,13 +24,41 @@ export default function OurProducts() {
                     </p>
                 </div>
                 <div className="products-container">
-                    <OurProductsList />
-                    <div className="swiper-button-prev"></div>
-                    <div className="swiper-button-next"></div>
+                    <Swiper className="swiper swiper2"
+                        modules={[Navigation]}
+                        spaceBetween={12}
+                        slidesPerView={1}
+                        grabCursor={true}
+                        navigation
+                        loop={true}
+                        breakpoints={{
+                            551: {
+                                slidesPerView: 2,
+                            },
+                            850: {
+                                slidesPerView: 3,
+                            },
+                            1150: {
+                                slidesPerView: 4,
+                            },
+                            1325: {
+                                width: 1325,
+                                slidesPerView: 5,
+                            }
+                        }}>
+                        <div className='swiper-wrapper'>
+                            {productData.map(item =>
+                                <SwiperSlide className="product-item" key={item.id}>
+                                    <img src={item.imgSrc} alt="product" />
+                                    <h5>{item.title}</h5>
+                                    <div className="divider-red"></div>
+                                </SwiperSlide>
+                            )};
+                        </div>
+                    </Swiper>
                 </div>
-                <img src={Group105} alt="detalj" id="detail" />
+                <img src="assets/Group 105.png" alt="detalj" id="detail" />
             </section>
-
         </>
     );
 }

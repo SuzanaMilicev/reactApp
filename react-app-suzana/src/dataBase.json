@@ -3,7 +3,7 @@
       {
        "id": 1,
         "category": "distribution",
-        "imgSrc": "../assets/partneri.png",
+        "imgSrc": "assets/partneri.png",
         "title": "POSTANITE NAŠ PARTNER"
       },
       {
@@ -89,6 +89,50 @@
         "category": "brands",
         "imgSrc": "assets/logoi-06.png",
         "title": "Cif"
+      }
+    ],
+    "nav" : [
+      {
+        "id" : "1",
+        "title" : "O NAMA",
+        "link" : "#about",
+        "span" : "vizija za uspeh"
+      },
+      {
+        "id" : "2",
+        "title" : "DVG PROIZVODI",
+        "link" : "#our-products",
+        "span" : "naši proizvodi"
+      },
+      {
+        "id" : "3",
+        "title" : "BRENDOVI",
+        "link" : "#brands",
+        "span" : "koje zastupamo"
+      },
+      {
+        "id" : "4",
+        "title" : "DISTRIBUCIJA",
+        "link" : "#distribution",
+        "span" : "vizija za uspeh"
+      },
+      {
+        "id" : "5",
+        "title" : "SARADNJA",
+        "link" : "#0",
+        "span" : "proširenje ponude"
+      },
+      {
+        "id" : "6",
+        "title" : "NOVOSTI",
+        "link" : "#0",
+        "span" : "aktuelnosti"
+      },
+      {
+        "id" : "7",
+        "title" : "KONTAKT",
+        "link" : "#footer",
+        "span" : "kontaktirajte nas"
       }
     ]
   }
