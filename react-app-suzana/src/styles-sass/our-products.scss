@@ -25,22 +25,24 @@
     .products-container {
         .swiper {
             width: 90%;
-            height: 400px;
             margin: 0 auto;
 
             .swiper-wrapper {
-                margin: 0 auto;
                 display: flex;
                 align-content: center;
             }
         }
 
+        li {
+            list-style: none;
+        }
+
         .product-item {
             position: relative;
-            margin: 0 50px;
+            margin: 0 10px;
 
             h5 {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 400;
                 color: #474747;
                 position: absolute;

@@ -11,16 +11,17 @@ import { useState } from 'react';
 
 export default function Index() {
     const [dark, setDark] = useState(false);
+
     return (
         <>
-            <Header dark={dark} onsetDark={setDark}/>
+            <Header dark={dark} onsetDark={setDark} />
             <HeroHeader />
-            <About dark={dark}/>
-            <Distribution dark={dark}/>
-            <InNumbers dark={dark}/>
-            <OurProducts dark={dark}/>
-            <Brands dark={dark}/>
-            <Footer dark={dark}/>
+            <About dark={dark} />
+            <Distribution dark={dark} />
+            <InNumbers dark={dark} />
+            <OurProducts dark={dark} />
+            <Brands dark={dark} />
+            <Footer dark={dark} />
             <Modal dark={dark}/>
         </>
     );

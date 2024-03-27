@@ -1,46 +1,20 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/header.scss';
-import { Close, DarkMode, Menu, WbSunny } from "@mui/icons-material";
-import { logo } from '../assets';
+import { DarkMode, Menu, WbSunny } from "@mui/icons-material";
+import nav from './../dataBase.json';
+import { useState } from 'react';
 
-function openMenu() {
-    var menu = document.querySelector(".menu");
-    var openBtn = document.getElementById("menu-btn1");
-    var closeBtn = document.getElementById("menu-btn2");
-    menu.style.display = "flex";
-    closeBtn.style.display = "block";
-    openBtn.style.display = "none";
-};
+export default function Header({ dark, onsetDark }) {
+    const [isVisible, setIsVisible] = useState(false);
 
-function closeMenu() {
-    var menu = document.querySelector(".menu");
-    var openBtn = document.getElementById("menu-btn1");
-    var closeBtn = document.getElementById("menu-btn2");
-    menu.style.display = "none";
-    closeBtn.style.display = "none";
-    openBtn.style.display = "block";
-};
-
-document.querySelectorAll(".menu li a").forEach(function (elem) {
-    elem.addEventListener('click', function (ev) {
-        var menu = document.querySelector(".menu");
-        var openBtn = document.getElementById("menu-btn1");
-        var closeBtn = document.getElementById("menu-btn2");
-        menu.style.display = "none";
-        closeBtn.style.display = "none";
-        openBtn.style.display = "block";
-    });
-});
-
-export default function Header({dark, onsetDark}) {
     return (
         <>
             <header className="header">
                 <div className="header-gray">
-                    <img src={logo} alt="logo" className="logo" />
+                    <img src="assets/logo.png" alt="logo" className="logo" />
                     <span className="languages">
                         <div className="toggle">
-                            <input type="checkbox" className="checkbox" id="checkbox" checked={dark} onChange={(e) => onsetDark(document.body.classList.toggle("dark"))}/>
+                            <input type="checkbox" className="checkbox" id="checkbox" checked={dark} onChange={(e) => onsetDark(document.body.classList.toggle("dark"))} />
                             <label htmlFor="checkbox" className="checkbox-label">
                                 <DarkMode className="material-symbols-outlined" />
                                 <WbSunny className="material-symbols-outlined" />
@@ -59,69 +33,37 @@ export default function Header({dark, onsetDark}) {
                     </span>
                 </div>
                 <nav className="navbar">
-                    <ul className="menu">
-                        <li>
-                            <a className="button" href="#about">
-                                O NAMA
-                                <br />
-                                <span>vizija za uspeh</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="button" href="#our-products">
-                                DVG PROIZVODI
-                                <br />
-                                <span>naši proizvodi</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="button" href="#brands">
-                                BRENDOVI
-                                <br />
-                                <span>koje zastupamo</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="button" href="#distribution">
-                                DISTRIBUCIJA
-                                <br />
-                                <span>logistika i operativa</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="button" href="#0">
-                                SARADNJA
-                                <br />
-                                <span>proširenje ponude</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="button" href="#0">
-                                NOVOSTI
-                                <br />
-                                <span>aktuelnosti</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a className="button" href="#footer">
-                                KONTAKT
-                                <br />
-                                <span>kontaktirajte nas</span>
-                            </a>
-                        </li>
-                    </ul>
                     <div className="hamburger">
                         <Menu
                             className="material-symbols-outlined"
                             id="menu-btn1"
-                            onClick={openMenu}
-                        />
-                        <Close
-                            className="material-symbols-outlined"
-                            id="menu-btn2"
-                            onClick={closeMenu}
+                            onClick={() => setIsVisible((prev) => !prev)}
                         />
                     </div>
+                    <ul className="menu">
+                        {nav.nav.map(item =>
+                            <li>
+                                <a className="button" key={item.id} href={item.link}>
+                                    {item.title}
+                                    <br />
+                                    <span>{item.span}</span>
+                                </a>
+                            </li>
+                        )}
+                    </ul>
+                    {isVisible && (
+                        <ul className="menu-mobile">
+                            {nav.nav.map(item =>
+                                <li>
+                                    <a className="button" key={item.id} href={item.link}>
+                                        {item.title}
+                                        <br />
+                                        <span>{item.span}</span>
+                                    </a>
+                                </li>
+                            )}
+                        </ul>
+                    )}
                 </nav>
             </header>
         </>

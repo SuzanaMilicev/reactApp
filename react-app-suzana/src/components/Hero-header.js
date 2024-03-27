@@ -1,8 +1,5 @@
 import './../styles-sass/general.scss';
 import './../styles-sass/hero.scss';
-import { hero1 } from '../assets';
-import { hero2 } from '../assets';
-import { hero3 } from '../assets';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -14,17 +11,18 @@ export default function HeroHeader() {
             <section className="hero-header">
                 <Swiper className="swiper swiper1"
                     modules={Pagination}
-                    pagination={{ clickable: true }}
-                    loop={true}>
+                    pagination={true}
+                    grabCursor={true}
+                    loop={true}
+                    >
                     <SwiperSlide>
-                        <img src={hero1} alt="hero1" />
+                        <img src="assets/hero1.png" alt="hero1" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={hero2} alt="hero2" />
-                        &gt;
+                        <img src="assets/hero2.jpg" alt="hero2" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={hero3} alt="hero3" />
+                        <img src="assets/hero3.jpg" alt="hero3" />
                     </SwiperSlide>
                 </Swiper>
             </section>
